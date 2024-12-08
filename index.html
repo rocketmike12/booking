@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 420px;
+        }
+
+        .day {
+            width: 50px;
+            height: 50px;
+            background-color: #00FF00;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .taken {
+            background-color: #FF0000;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calendar"></div>
+        <div class="booked"></div>
+    </div>
+    <script src="./script.js" type="module"></script>
+</body>
+</html>
