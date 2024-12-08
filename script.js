@@ -22,11 +22,13 @@ const renderDays = function () {
 }
 
 calendar.addEventListener('click', (event) => {
-    days[event.target.id] = false;
-    let book = document.createElement('p');
-    book.textContent = `${Number(event.target.id) + 1}.12.2024 09:00`;
-    booked.appendChild(book);
-    renderDays();
+    if (event.target.nodeName === 'BUTTON') {
+        days[event.target.id] = false;
+        let book = document.createElement('p');
+        book.textContent = `${Number(event.target.id) + 1}.12.2024 09:00`;
+        booked.appendChild(book);
+        renderDays();
+    }
 })
 
 renderDays();
